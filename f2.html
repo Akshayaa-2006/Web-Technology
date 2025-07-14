@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid py-4">
+  <div class="card shadow-lg border-0">
+    <div class="card-header bg-success text-white py-3">
+      <h3 class="mb-0"><i class="bi bi-cart-plus me-2"></i>Customer Order Form</h3>
+    </div>
+    <div class="card-body bg-light">
+      <form class="needs-validation" novalidate>
+        <!-- Customer Information -->
+        <h5 class="mb-4 border-bottom pb-2">Customer Information</h5>
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="customerName" placeholder="Full Name" required>
+              <label for="customerName">Full Name</label>
+              <div class="invalid-feedback">Please enter customer name.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="customerEmail" placeholder="Email Address" required>
+              <label for="customerEmail">Email Address</label>
+              <div class="invalid-feedback">Please enter valid email.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <label for="customerPhone" class="form-label">Phne Number</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+              <input type="tel" class="form-control" id="customerPhone" required>
+              <div class="invalid-feedback">Please enter phone number.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="orderDate" class="form-label">Order Date</label>
+            <input type="date" class="form-control" id="orderDate" required>
+            <div class="invalid-feedback">Please select order date.</div>
+          </div>
+        </div>
+
+        <!-- Shipping Information -->
+        <h5 class="mb-4 mt-5 border-bottom pb-2">Shipping Information</h5>
+        <div class="mb-4">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Shipping Address" id="shippingAddress" style="height: 100px" required></textarea>
+            <label for="shippingAddress">Shipping Address</label>
+            <div class="invalid-feedback">Please enter shipping address.</div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <label for="shippingMethod" class="form-label">Shipping Method</label>
+            <select class="form-select" id="shippingMethod" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Standard Shipping</option>
+              <option>Express Shipping</option>
+              <option>Pickup</option>
+            </select>
+            <div class="invalid-feedback">Please select shipping method.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="paymentMethod" class="form-label">Payment Method</label>
+            <select class="form-select" id="paymentMethod" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Credit Card</option>
+              <option>PayPal</option>
+              <option>Bank Transfer</option>
+              <option>Cash on Delivery</option>
+            </select>
+            <div class="invalid-feedback">Please select payment method.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="orderStatus" class="form-label">Order Status</label>
+            <select class="form-select" id="orderStatus" required>
+              <option selected>Pending</option>
+              <option>Processing</option>
+              <option>Shipped</option>
+              <option>Delivered</option>
+              <option>Cancelled</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Order Items -->
+        <h5 class="mb-4 mt-5 border-bottom pb-2">Order Items</h5>
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered">
+            <thead class="table-primary">
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select class="form-select" required>
+                    <option selected disabled value="">Select Item</option>
+                    <option>Laptop</option>
+                    <option>Mouse</option>
+                    <option>Keyboard</option>
+                  </select>
+                </td>
+                <td>$999.00</td>
+                <td>
+                  <input type="number" class="form-control" value="1" min="1">
+                </td>
+                <td>$999.00</td>
+               
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5" class="text-end">
+                  <button class="btn btn-sm btn-primary"><i class="bi bi-plus-circle me-1"></i>Add Item</button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="row mb-4">
+          <div class="col-md-6 offset-md-6">
+            <div class="card border-primary">
+              <div class="card-header bg-primary text-white">
+                <h6 class="mb-0">Order Summary</h6>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Subtotal:</span>
+                  <span>$999.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Shipping:</span>
+                  <span>$15.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Tax (10%):</span>
+                  <span>$99.90</span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold">
+                  <span>Total:</span>
+                  <span>$1,113.90</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-outline-secondary me-md-2" type="button">Cancel</button>
+          <button class="btn btn-success" type="submit">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+
+</body>
+</html>
