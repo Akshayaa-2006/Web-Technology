@@ -50,6 +50,39 @@
             <div class="invalid-feedback">Please select order date.</div>
           </div>
         </div>
+<!-- Add this inside your form tag -->
+<!-- File Upload -->
+<h5 class="mb-4 mt-5 border-bottom pb-2">Attachments</h5>
+<div class="mb-4">
+  <label for="uploadFile" class="form-label">Upload Supporting Document (optional)</label>
+  <input class="form-control" type="file" id="uploadFile">
+</div>
+
+<!-- Delivery Options with Radio -->
+<h5 class="mb-4 mt-5 border-bottom pb-2">Delivery Preference</h5>
+<div class="mb-4">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="deliveryOption" id="homeDelivery" value="home" required>
+    <label class="form-check-label" for="homeDelivery">Home Delivery</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="deliveryOption" id="storePickup" value="pickup">
+    <label class="form-check-label" for="storePickup">Pickup</label>
+  </div>
+
+<!-- Checkboxes -->
+<h5 class="mb-4 mt-5 border-bottom pb-2">Additional Services</h5>
+<div class="mb-4">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="giftWrap">
+    <label class="form-check-label" for="giftWrap">Gift Wrap</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="warranty">
+    <label class="form-check-label" for="warranty">Add Extended Warranty</label>
+  </div>
+</div>
+
 
         <!-- Shipping Information -->
         <h5 class="mb-4 mt-5 border-bottom pb-2">Shipping Information</h5>
